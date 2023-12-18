@@ -1,4 +1,4 @@
-package pro.sky.StringList.exception;
+package pro.sky.IntList.exception;
 
 public class NullItemException extends RuntimeException {
     public NullItemException() {

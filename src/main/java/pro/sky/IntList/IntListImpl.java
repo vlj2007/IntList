@@ -1,21 +1,21 @@
-package pro.sky.StringList;
+package pro.sky.IntList;
 
-import pro.sky.StringList.exception.InvalidIndexException;
-import pro.sky.StringList.exception.NullItemException;
-import pro.sky.StringList.exception.StorageIsFullException;
+import pro.sky.IntList.exception.InvalidIndexException;
+import pro.sky.IntList.exception.NullItemException;
+import pro.sky.IntList.exception.StorageIsFullException;
 
 import java.util.Arrays;
 
-public class StringListImpl implements StringList {
+public class IntListImpl implements IntList {
 
     private final String[] storage;
     private int size;
 
-    public StringListImpl() {
+    public IntListImpl() {
         storage = new String[10];
     }
 
-    public StringListImpl(int size) {
+    public IntListImpl(int size) {
         this.storage = new String[size];
     }
 
@@ -126,7 +126,7 @@ public class StringListImpl implements StringList {
     }
 
     @Override
-    public boolean equals(StringList otherList) {
+    public boolean equals(IntList otherList) {
         return Arrays.equals(this.toArray(), otherList.toArray());
     }
 

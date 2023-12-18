@@ -1,6 +1,6 @@
-package pro.sky.StringList;
+package pro.sky.IntList;
 
-public interface StringList {
+public interface IntList {
     String add(String item);
     String add (int index, String item);
     String set(int index, String item);
@@ -10,7 +10,7 @@ public interface StringList {
     int indexOf(String item);
     int lastIndexOf(String item);
     String get(int index);
-    boolean equals(StringList otherList);
+    boolean equals(IntList otherList);
     int size();
     boolean isEmpty();
     void clear();

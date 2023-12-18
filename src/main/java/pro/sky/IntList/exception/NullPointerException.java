@@ -1,4 +1,4 @@
-package pro.sky.StringList.exception;
+package pro.sky.IntList.exception;
 
 public class NullPointerException extends RuntimeException {
     public NullPointerException(String message) {

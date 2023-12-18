@@ -1,13 +1,13 @@
-package pro.sky.StringList;
+package pro.sky.IntList;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StringListApplication {
+public class IntListApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StringListApplication.class, args);
+		SpringApplication.run(IntListApplication.class, args);
 	}
 
 }
