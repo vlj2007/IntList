@@ -8,18 +8,18 @@ import java.util.Arrays;
 
 public class IntListImpl implements IntList {
 
-    private final String[] storage;
+    private final Integer[] storage;
     private int size;
 
     public IntListImpl() {
-        storage = new String[10];
+        storage = new Integer[10];
     }
 
     public IntListImpl(int size) {
-        this.storage = new String[size];
+        this.storage = new Integer[size];
     }
 
-    private void validateItem(String item) {
+    private void validateItem(Integer item) {
         if (item == null) {
             throw new NullItemException();
         }
@@ -44,7 +44,7 @@ public class IntListImpl implements IntList {
 
 
     @Override
-    public String add(String item) {
+    public Integer add(Integer item) {
         validateSize();
         validateItem(item);
         storage[size++] = item;
@@ -53,7 +53,7 @@ public class IntListImpl implements IntList {
 
 
     @Override
-    public String add(int index, String item) {
+    public Integer add(int index, Integer item) {
         validateSize();
         validateItem(item);
         validateIndex(index);
@@ -69,7 +69,7 @@ public class IntListImpl implements IntList {
 
 
     @Override
-    public String set(int index, String item) {
+    public Integer set(int index, Integer item) {
         validateIndex(index);
         validateItem(item);
         storage[index] = item;
@@ -77,16 +77,16 @@ public class IntListImpl implements IntList {
     }
 
     @Override
-    public String remove(String item) {
+    public Integer remove(Integer item) {
         validateItem(item);
         int index = indexOf(item);
         return remove(index);
     }
 
     @Override
-    public String remove(int index) {
+    public Integer remove(int index) {
         validateIndex(index);
-        String item = storage[index];
+        Integer item = storage[index];
         if (index != size) {
             System.arraycopy(storage, index + 1, storage, index, size - (index + 1));
         }
@@ -95,12 +95,12 @@ public class IntListImpl implements IntList {
     }
 
     @Override
-    public boolean contains(String item) {
+    public boolean contains(Integer item) {
         return indexOf(item) != -1;
     }
 
     @Override
-    public int indexOf(String item) {
+    public int indexOf(Integer item) {
         for (int i = 0; i < size; i++) {
             if (storage[i].equals(item)) {
                 return i;
@@ -110,7 +110,7 @@ public class IntListImpl implements IntList {
     }
 
     @Override
-    public int lastIndexOf(String item) {
+    public int lastIndexOf(Integer item) {
         for (int i = size - 1; i >= 0; i--) {
             if (storage[i].equals(item)) {
                 return -1;
@@ -120,7 +120,7 @@ public class IntListImpl implements IntList {
     }
 
     @Override
-    public String get(int index) {
+    public Integer get(int index) {
         validateIndex(index);
         return storage[index];
     }
@@ -146,7 +146,7 @@ public class IntListImpl implements IntList {
     }
 
     @Override
-    public String[] toArray() {
+    public Integer[] toArray() {
         return Arrays.copyOf(storage, size);
     }
 

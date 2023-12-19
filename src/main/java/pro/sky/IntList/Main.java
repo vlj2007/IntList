@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        IntList str2 = new IntListImpl(4);
-        System.out.println(str2.add("Элемент1"));
-        System.out.println(str2.add("Элемент2"));
-        str2.remove("Элемент1");
-        System.out.println(Arrays.toString(str2.toArray()));
-        System.out.println(str2.contains("Элемент1"));
-        System.out.println(str2.contains("Элемент2"));
+        IntList int2 = new IntListImpl(4);
+        System.out.println(int2.add(1));
+        System.out.println(int2.add(2));
+        int2.remove(1);
+        System.out.println(Arrays.toString(int2.toArray()));
+        System.out.println(int2.contains(1));
+        System.out.println(int2.contains(2));
     }
 }
